@@ -8,17 +8,13 @@
 
 ; Instruments
 (definst bass [freq 110 volume 1.0]
-  (-> freq
-      saw
-      (distort)
+  (-> (saw freq)
       (* (env-gen (perc 0.1 0.4) :action FREE))
       (* volume)))
 
 (definst organ [freq 440 dur 1 volume 1.0]
-  (-> freq
-      square
+  (-> (square freq)
       (* (env-gen (adsr 0.01 0.8 0.1) (line:kr 1 0 dur) :action FREE))
-      (+ (* (sin-osc (* 1/2 freq) (sin-osc 2)) (env-gen (perc 0 dur))))
       (* 1/4 volume)))
 
 ; Arrangement
