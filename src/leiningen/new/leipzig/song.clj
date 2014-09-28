@@ -48,7 +48,10 @@
     (where :time (bpm 90))
     (where :duration (bpm 90))))
 
+(defn -main []
+  (live/play track))
+
 (comment
-  (live/play track)
+  ; Loop the track, allowing live editing.
   (live/jam (var track))
 )

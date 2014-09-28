@@ -4,7 +4,10 @@ A Leiningen template for Leipzig tracks.
 
 ## Usage
 
-`lein new leipzig my-symphony`
+This template creates a new Leipzig project, with a ready-made snippet of music to get you started.
+* `lein new leipzig my-symphony`
+* `cd my-symphony`
+* `lein run`
 
 ## License
 
