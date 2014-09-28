@@ -1,4 +1,4 @@
-# leipzig
+# Leipzig Template 
 
 A Leiningen template for Leipzig tracks.
 
@@ -9,7 +9,7 @@ This template creates a new Leipzig project, with a ready-made snippet of music 
 * `cd my-symphony`
 * `lein run`
 
-## License
+## Licence
 
 Copyright © 2014 Chris Ford 
 
