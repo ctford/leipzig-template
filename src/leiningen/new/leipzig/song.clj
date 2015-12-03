@@ -28,12 +28,12 @@
   (->> (phrase (cycle [1 1/2 1/2 1 1]) [0 -3 -1 0 2 0 2 3 2 0])
        (where :pitch (scale/from root))
        (where :pitch (comp scale/lower scale/lower))
-       (where :part (is :bass))))
+       (all :part :bass)))
 
 (defn accompaniment [root]
   (->>
     (phrase [8] [(-> chord/seventh (chord/root root))])
-    (where :part (is :accompaniment))))
+    (all :part :accompaniment)))
 
 ; Track
 (def track
@@ -41,8 +41,7 @@
     (mapthen bassline progression)
     (with (mapthen accompaniment progression))
     (where :pitch (comp temperament/equal scale/A scale/minor))
-    (where :time (bpm 90))
-    (where :duration (bpm 90))))
+    (tempo (bpm 90))))
 
 (defn -main []
   (live/play track))
