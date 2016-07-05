@@ -2,4 +2,4 @@
   :main ^{:skip-aot true} {{name}}.song
   :dependencies [[org.clojure/clojure "1.5.1"]
                  [overtone "0.9.1"]
-                 [leipzig "0.9.0"]])
+                 [leipzig "0.10.0"]])
